@@ -1,0 +1,17 @@
+activator new
+./sbt
+./sbt run
+run
+compile
+run
+sbt run -jvm-debug 9999
+rin -jvm-debug 9999
+run -jvm-debug 9999
+run -jvm-debug 9991
+run -jvm-debug 99
+compile
+run -jvm-debug 9999
+run -jvm-debug-9999
+run -jvm-debug
+run -jvm-debug 9999
+sbt run -jvm-debug 9999
