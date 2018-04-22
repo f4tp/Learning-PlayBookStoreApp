@@ -1,7 +1,6 @@
 package controllers;
 import play.mvc.*;
-
-import views.html.*;
+import views.html.Home.*;
 
 /**
  * This controller contains an action to handle HTTP requests
@@ -30,16 +29,22 @@ public class HomeController extends Controller {
         return ok( "About");
     }
 
-    //call with e.g. http://localhost:9000/welcome/nameExample
-    public Result welcome(String name)
+    //call with e.g. http://localhost:9000/welcomeAgain/nameExample
+    public Result welcomeAgain(String name)
     {
         return ok(name);
     }
 
     // call with e.g.  http://localhost:9000/welcomeAgain/Peter/Beard
-    public Result welcomeAgain(String namer, String lastnamer)
+  //  public Result welcome(String namer, String lastnamer)
+   // {
+       // return ok("welcome " + namer + " " + lastnamer + " to our humble website");
+   // }
+
+    //variables have been declared / used in in view > Home . welcome.scala.html file
+    public Result welcome(String namer, String lastnamer)
     {
-        return ok("welcome " + namer + " " + lastnamer + " to our humble website");
+        return ok(welcome.render(namer, lastnamer));
     }
 
 }

@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/Quad/Documents/Play Projects/BookStoreApp/conf/routes
-// @DATE:Sun Apr 22 11:04:13 BST 2018
+// @DATE:Sun Apr 22 11:44:00 BST 2018
 
 package router
 
@@ -52,8 +52,8 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """message""", """controllers.AsyncController.message"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """about""", """controllers.HomeController.about"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """welcome/""" + "$" + """name<[^/]+>""", """controllers.HomeController.welcome(name:String)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """welcomeAgain/""" + "$" + """namer<[^/]+>/""" + "$" + """lastnamer<[^/]+>""", """controllers.HomeController.welcomeAgain(namer:String, lastnamer:String)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """welcomeAgain/""" + "$" + """name<[^/]+>""", """controllers.HomeController.welcomeAgain(name:String)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """welcome/""" + "$" + """namer<[^/]+>/""" + "$" + """lastnamer<[^/]+>""", """controllers.HomeController.welcome(namer:String, lastnamer:String)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -152,36 +152,36 @@ class Routes(
   )
 
   // @LINE:19
-  private[this] lazy val controllers_HomeController_welcome5_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("welcome/"), DynamicPart("name", """[^/]+""",true)))
+  private[this] lazy val controllers_HomeController_welcomeAgain5_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("welcomeAgain/"), DynamicPart("name", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_HomeController_welcome5_invoker = createInvoker(
-    HomeController_0.welcome(fakeValue[String]),
+  private[this] lazy val controllers_HomeController_welcomeAgain5_invoker = createInvoker(
+    HomeController_0.welcomeAgain(fakeValue[String]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
-      "welcome",
+      "welcomeAgain",
       Seq(classOf[String]),
       "GET",
-      this.prefix + """welcome/""" + "$" + """name<[^/]+>""",
-      """has a variable called name                                                                                 passing this method a string variable called name""",
+      this.prefix + """welcomeAgain/""" + "$" + """name<[^/]+>""",
+      """has a variable called name   passing this method a string variable called name""",
       Seq()
     )
   )
 
   // @LINE:21
-  private[this] lazy val controllers_HomeController_welcomeAgain6_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("welcomeAgain/"), DynamicPart("namer", """[^/]+""",true), StaticPart("/"), DynamicPart("lastnamer", """[^/]+""",true)))
+  private[this] lazy val controllers_HomeController_welcome6_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("welcome/"), DynamicPart("namer", """[^/]+""",true), StaticPart("/"), DynamicPart("lastnamer", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_HomeController_welcomeAgain6_invoker = createInvoker(
-    HomeController_0.welcomeAgain(fakeValue[String], fakeValue[String]),
+  private[this] lazy val controllers_HomeController_welcome6_invoker = createInvoker(
+    HomeController_0.welcome(fakeValue[String], fakeValue[String]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
-      "welcomeAgain",
+      "welcome",
       Seq(classOf[String], classOf[String]),
       "GET",
-      this.prefix + """welcomeAgain/""" + "$" + """namer<[^/]+>/""" + "$" + """lastnamer<[^/]+>""",
+      this.prefix + """welcome/""" + "$" + """namer<[^/]+>/""" + "$" + """lastnamer<[^/]+>""",
       """""",
       Seq()
     )
@@ -221,15 +221,15 @@ class Routes(
       }
   
     // @LINE:19
-    case controllers_HomeController_welcome5_route(params@_) =>
+    case controllers_HomeController_welcomeAgain5_route(params@_) =>
       call(params.fromPath[String]("name", None)) { (name) =>
-        controllers_HomeController_welcome5_invoker.call(HomeController_0.welcome(name))
+        controllers_HomeController_welcomeAgain5_invoker.call(HomeController_0.welcomeAgain(name))
       }
   
     // @LINE:21
-    case controllers_HomeController_welcomeAgain6_route(params@_) =>
+    case controllers_HomeController_welcome6_route(params@_) =>
       call(params.fromPath[String]("namer", None), params.fromPath[String]("lastnamer", None)) { (namer, lastnamer) =>
-        controllers_HomeController_welcomeAgain6_invoker.call(HomeController_0.welcomeAgain(namer, lastnamer))
+        controllers_HomeController_welcome6_invoker.call(HomeController_0.welcome(namer, lastnamer))
       }
   }
 }

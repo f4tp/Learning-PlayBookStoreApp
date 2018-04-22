@@ -1,35 +1,21 @@
-2018-04-22 11:04:28,716 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-4 - ApplicationTimer demo: Starting application at 2018-04-22T10:04:28.715Z
-2018-04-22 11:04:29,207 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-4 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2018-04-22 11:58:22,616 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-9 - ApplicationTimer demo: Starting application at 2018-04-22T10:58:22.616Z
+2018-04-22 11:58:23,313 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-9 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
     filters.ExampleFilter
 
-2018-04-22 11:04:29,427 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-4 - Application started (Dev)
-2018-04-22 11:04:29,690 [WARN] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-7 - decode: cookie has invalid signature! message = JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
-2018-04-22 11:04:29,692 [INFO] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-7 - The JWT signature in the cookie does not match the locally computed signature with the server.
+2018-04-22 11:58:23,575 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-9 - Application started (Dev)
+2018-04-22 11:58:24,131 [WARN] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-6 - decode: cookie has invalid signature! message = JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2018-04-22 11:58:24,133 [INFO] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-6 - The JWT signature in the cookie does not match the locally computed signature with the server.
 This usually indicates the browser has a leftover cookie from another Play application,
 so clearing cookies may resolve this error message.
-2018-04-22 11:04:37,454 [WARN] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-4 - decode: cookie has invalid signature! message = JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
-2018-04-22 11:04:37,454 [INFO] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-4 - The JWT signature in the cookie does not match the locally computed signature with the server.
+2018-04-22 11:58:24,729 [WARN] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-6 - decode: cookie has invalid signature! message = JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2018-04-22 11:58:24,730 [INFO] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-6 - The JWT signature in the cookie does not match the locally computed signature with the server.
 This usually indicates the browser has a leftover cookie from another Play application,
 so clearing cookies may resolve this error message.
-2018-04-22 11:04:47,237 [WARN] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-4 - decode: cookie has invalid signature! message = JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
-2018-04-22 11:04:47,237 [INFO] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-4 - The JWT signature in the cookie does not match the locally computed signature with the server.
-This usually indicates the browser has a leftover cookie from another Play application,
-so clearing cookies may resolve this error message.
-2018-04-22 11:06:14,571 [INFO] from application in application-akka.actor.default-dispatcher-12 - ApplicationTimer demo: Stopping application at 2018-04-22T10:06:14.571Z after 106s.
-2018-04-22 11:06:15,116 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-14 - ApplicationTimer demo: Starting application at 2018-04-22T10:06:15.116Z
-2018-04-22 11:06:15,512 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-14 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-
-2018-04-22 11:06:15,526 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-14 - Application started (Dev)
-2018-04-22 11:06:15,569 [WARN] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-6 - decode: cookie has invalid signature! message = JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
-2018-04-22 11:06:15,571 [INFO] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-6 - The JWT signature in the cookie does not match the locally computed signature with the server.
+2018-04-22 11:59:00,919 [WARN] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-5 - decode: cookie has invalid signature! message = JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2018-04-22 11:59:00,919 [INFO] from play.api.mvc.DefaultJWTCookieDataCodec in application-akka.actor.default-dispatcher-5 - The JWT signature in the cookie does not match the locally computed signature with the server.
 This usually indicates the browser has a leftover cookie from another Play application,
 so clearing cookies may resolve this error message.
