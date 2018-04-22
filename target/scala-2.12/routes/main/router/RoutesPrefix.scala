@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/Quad/Documents/Play Projects/BookStoreApp/conf/routes
-// @DATE:Sun Apr 22 11:44:00 BST 2018
+// @DATE:Sun Apr 22 15:48:48 BST 2018
 
 
 package router {

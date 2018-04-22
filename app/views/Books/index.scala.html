@@ -1,0 +1,19 @@
+@(books : Set[Book])
+<!-- set object has been defined -->
+<html>
+  <head>
+   <title> All Books</title>
+  </head>
+  <body>
+    <h1> All Books </h1>
+
+    <!-- scala for each loop -->
+    @for(tempbook <- books){
+      <a href="#">Book Title = @tempbook.title </a>
+      <p> Price = @tempbook.price </p>
+      <p> Author = @tempbook.author </p>
+    }
+
+  </body>
+</html>
+
