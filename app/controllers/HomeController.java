@@ -23,14 +23,23 @@ public class HomeController extends Controller {
         //practicing with  Git
     }
 
+
+    //call with http://localhost:9000/about
     public Result about()
     {
         return ok( "About");
     }
 
-    public Result welcome()
+    //call with e.g. http://localhost:9000/welcome/nameExample
+    public Result welcome(String name)
     {
-        return ok("welcome page is here");
+        return ok(name);
+    }
+
+    // call with e.g.  http://localhost:9000/welcomeAgain/Peter/Beard
+    public Result welcomeAgain(String namer, String lastnamer)
+    {
+        return ok("welcome " + namer + " " + lastnamer + " to our humble website");
     }
 
 }

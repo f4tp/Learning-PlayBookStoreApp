@@ -22,3 +22,6 @@ run
 compile
 run
 git add .
+run
+compile
+run
