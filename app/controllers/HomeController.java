@@ -20,6 +20,17 @@ public class HomeController extends Controller {
         String name = "RaidxCode";
        // return ok(index.render("This is work that Paul Treadwell has typed in"));
         return ok("Hello Play");
+        //practicing with  Git
+    }
+
+    public Result about()
+    {
+        return ok( "About");
+    }
+
+    public Result welcome()
+    {
+        return ok("welcome page is here");
     }
 
 }

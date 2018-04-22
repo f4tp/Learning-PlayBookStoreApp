@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/Users/Quad/Documents/Play Projects/play-java-starter-example/conf/routes
-// @DATE:Sat Apr 21 13:36:14 BST 2018
+// @SOURCE:C:/Users/Quad/Documents/Play Projects/BookStoreApp/conf/routes
+// @DATE:Sun Apr 22 10:47:04 BST 2018
 
 package router
 
@@ -51,6 +51,8 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """count""", """controllers.CountController.count"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """message""", """controllers.AsyncController.message"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """about""", """controllers.HomeController.about"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """welcome""", """controllers.HomeController.welcome"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -130,6 +132,42 @@ class Routes(
     )
   )
 
+  // @LINE:16
+  private[this] lazy val controllers_HomeController_about4_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("about")))
+  )
+  private[this] lazy val controllers_HomeController_about4_invoker = createInvoker(
+    HomeController_0.about,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "about",
+      Nil,
+      "GET",
+      this.prefix + """about""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:18
+  private[this] lazy val controllers_HomeController_welcome5_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("welcome")))
+  )
+  private[this] lazy val controllers_HomeController_welcome5_invoker = createInvoker(
+    HomeController_0.welcome,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "welcome",
+      Nil,
+      "GET",
+      this.prefix + """welcome""",
+      """""",
+      Seq()
+    )
+  )
+
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
@@ -155,6 +193,18 @@ class Routes(
     case controllers_Assets_versioned3_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
         controllers_Assets_versioned3_invoker.call(Assets_1.versioned(path, file))
+      }
+  
+    // @LINE:16
+    case controllers_HomeController_about4_route(params@_) =>
+      call { 
+        controllers_HomeController_about4_invoker.call(HomeController_0.about)
+      }
+  
+    // @LINE:18
+    case controllers_HomeController_welcome5_route(params@_) =>
+      call { 
+        controllers_HomeController_welcome5_invoker.call(HomeController_0.welcome)
       }
   }
 }

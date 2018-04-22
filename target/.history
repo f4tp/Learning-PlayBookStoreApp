@@ -15,3 +15,10 @@ run -jvm-debug-9999
 run -jvm-debug
 run -jvm-debug 9999
 sbt run -jvm-debug 9999
+compile
+run
+compile
+run
+compile
+run
+git add .

@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/Users/Quad/Documents/Play Projects/play-java-starter-example/conf/routes
-// @DATE:Sat Apr 21 13:36:14 BST 2018
+// @SOURCE:C:/Users/Quad/Documents/Play Projects/BookStoreApp/conf/routes
+// @DATE:Sun Apr 22 10:47:04 BST 2018
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -39,12 +39,32 @@ package controllers.javascript {
     }
 
   
+    // @LINE:16
+    def about: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.about",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "about"})
+        }
+      """
+    )
+  
     // @LINE:6
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.index",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + """"})
+        }
+      """
+    )
+  
+    // @LINE:18
+    def welcome: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.welcome",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "welcome"})
         }
       """
     )
