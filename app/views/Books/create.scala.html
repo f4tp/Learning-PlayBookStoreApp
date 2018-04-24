@@ -1,18 +1,23 @@
-@(books : Set[Book])
-<!-- set object has been defined -->
+@(bookForm : Form[Book])
+@import play.api.data.Form
+@import models.Book
+@import helper._
+
 <html>
   <head>
-   <title> All Books</title>
+   <title> Create Book</title>
   </head>
   <body>
-    <h1> All Books </h1>
 
-    <!-- scala for each loop -->
-    @for(tempbook <- books){
-      <a href="#">Book Title = @tempbook.title </a>
-      <p> Price = @tempbook.price </p>
-      <p> Author = @tempbook.author </p>
-    }
+    <h1> Create Book </h1>
+      @helper.form(action = routes.BooksController.save()){
+        @helper.inputText(bookForm("id"))
+        @helper.inputText(bookForm("title"))
+        @helper.inputText(bookForm("price"))
+        @helper.inputText(bookForm("author"))
+
+        <input type="submit" value="Create Book" />
+      }
 
   </body>
 </html>

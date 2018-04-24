@@ -3,9 +3,15 @@ import play.mvc.*;
 import models.*;
 import java.util.Set;
 import views.html.Books.*;
-//import views.Books.*;
+import javax.inject.Inject;
+import play.data.*;
+
+
 
 public class BooksController extends Controller {
+
+    @Inject
+    FormFactory myFormFactory;
 
     public Result index()
     {
@@ -16,7 +22,11 @@ public class BooksController extends Controller {
     //to create book
     public Result create()
     {
-        return TODO;
+        //formfactory creates us a form for injected into the web page
+        Form<Book> bookForm = myFormFactory.form(Book.class);
+        return ok(create.render(bookForm));
+        //return TODO;
+
     }
 
     public Result save()

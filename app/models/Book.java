@@ -7,6 +7,11 @@ public class Book {
     public Integer price;
     public String author;
 
+
+    public Book()
+    {
+
+    }
     public Book(Integer idin, String titlein, Integer pricein, String authorin)
     {
         this.id  = idin;

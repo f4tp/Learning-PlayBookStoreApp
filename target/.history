@@ -29,3 +29,27 @@ compile
 run
 compile
 run
+compile
+run
+compile
+run
+compile
+run
+run - jvm-debug -9999
+run - jvm-debug
+.activator
+.activatorrun -debug
+run -jvm-debug
+run -jvm-debug -9999
+run -jvm-debug -1
+run -jvm-debug 9999
+run -jvm-debug9999
+run -jvm-debug 9999
+run -jvm-debug 9999-1000
+run -jvm-debug 80~
+run -jvm-debug 80
+run -jvm-debug
+run -jvm-debug 90001
+run -jvm-debug 9001
+compile
+run
