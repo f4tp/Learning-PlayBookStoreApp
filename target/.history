@@ -53,3 +53,12 @@ run -jvm-debug 90001
 run -jvm-debug 9001
 compile
 run
+sbt run -jvm-debug 9999
+run -jvm-debug 9999
+run -jvm -debug 9999
+-jvm-debug
+run -jvm debug
+run -jvm-debug
+run
+compile
+run
