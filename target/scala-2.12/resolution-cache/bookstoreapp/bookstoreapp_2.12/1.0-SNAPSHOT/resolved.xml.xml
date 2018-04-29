@@ -4,7 +4,7 @@
 		module="bookstoreapp_2.12"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20180428172523"
+		publication="20180429112954"
 	>
 		<description>
 		BookStoreApp

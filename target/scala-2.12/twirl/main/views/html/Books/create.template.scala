@@ -30,7 +30,7 @@ object create extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Htm
       {
 /*2.2*/import play.api.data.Form
 /*3.2*/import models.Book
-/*4.2*/import helper._
+/*4.2*/import views.html.helper
 
 
 Seq[Any](format.raw/*5.1*/("""
@@ -41,16 +41,17 @@ Seq[Any](format.raw/*5.1*/("""
   <body>
 
     <h1> Create Book </h1>
-      """),_display_(/*13.8*/helper/*13.14*/.form(action = routes.BooksController.save())/*13.59*/{_display_(Seq[Any](format.raw/*13.60*/("""
-        """),_display_(/*14.10*/helper/*14.16*/.inputText(bookForm("id"))),format.raw/*14.42*/("""
-        """),_display_(/*15.10*/helper/*15.16*/.inputText(bookForm("title"))),format.raw/*15.45*/("""
-        """),_display_(/*16.10*/helper/*16.16*/.inputText(bookForm("price"))),format.raw/*16.45*/("""
-        """),_display_(/*17.10*/helper/*17.16*/.inputText(bookForm("author"))),format.raw/*17.46*/("""
+    <!--this piece of code creates a route like
+    <form action=""/>books/create" method="POST">-->
+      """),_display_(/*15.8*/helper/*15.14*/.form(action = routes.BooksController.save())/*15.59*/{_display_(Seq[Any](format.raw/*15.60*/("""
+        """),_display_(/*16.10*/helper/*16.16*/.inputText(bookForm("id"))),format.raw/*16.42*/("""
+        """),_display_(/*17.10*/helper/*17.16*/.inputText(bookForm("title"))),format.raw/*17.45*/("""
+        """),_display_(/*18.10*/helper/*18.16*/.inputText(bookForm("price"))),format.raw/*18.45*/("""
+        """),_display_(/*19.10*/helper/*19.16*/.inputText(bookForm("author"))),format.raw/*19.46*/("""
+        """),format.raw/*20.9*/("""<input type="submit" value="Create Book">
+      """)))}),format.raw/*21.8*/("""
 
-        """),format.raw/*19.9*/("""<input type="submit" value="Create Book" />
-      """)))}),format.raw/*20.8*/("""
-
-  """),format.raw/*22.3*/("""</body>
+  """),format.raw/*23.3*/("""</body>
 </html>
 
 """))
@@ -69,11 +70,11 @@ Seq[Any](format.raw/*5.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Sat Apr 28 17:37:48 BST 2018
-                  SOURCE: F:/My Documents/Play Projects/BookStoreApp/app/views/Books/create.scala.html
-                  HASH: d9b377f5a5d4b8b7fc7cc76423e89a4075136c91
-                  MATRIX: 959->1|1055->26|1088->53|1114->73|1158->89|1185->90|1312->191|1327->197|1381->242|1420->243|1457->253|1472->259|1519->285|1556->295|1571->301|1621->330|1658->340|1673->346|1723->375|1760->385|1775->391|1826->421|1863->431|1944->482|1975->486
-                  LINES: 28->1|31->2|32->3|33->4|36->5|37->6|44->13|44->13|44->13|44->13|45->14|45->14|45->14|46->15|46->15|46->15|47->16|47->16|47->16|48->17|48->17|48->17|50->19|51->20|53->22
+                  DATE: Sun Apr 29 12:10:28 BST 2018
+                  SOURCE: D:/My Documents/Play Projects/BookStoreApp/app/views/Books/create.scala.html
+                  HASH: 9613742693bafd165bca71cc89d16ddb95ace66a
+                  MATRIX: 959->1|1055->26|1088->53|1114->73|1167->98|1194->99|1422->301|1437->307|1491->352|1530->353|1567->363|1582->369|1629->395|1666->405|1681->411|1731->440|1768->450|1783->456|1833->485|1870->495|1885->501|1936->531|1972->540|2051->589|2082->593
+                  LINES: 28->1|31->2|32->3|33->4|36->5|37->6|46->15|46->15|46->15|46->15|47->16|47->16|47->16|48->17|48->17|48->17|49->18|49->18|49->18|50->19|50->19|50->19|51->20|52->21|54->23
                   -- GENERATED --
               */
           

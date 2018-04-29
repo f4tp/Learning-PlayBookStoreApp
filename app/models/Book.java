@@ -12,12 +12,12 @@ public class Book {
     {
 
     }
-    public Book(Integer idin, String titlein, Integer pricein, String authorin)
+    public Book(Integer id, String title, Integer price, String author)
     {
-        this.id  = idin;
-        this.title = titlein;
-        this.price = pricein;
-        this.author = authorin;
+        this.id  = id;
+        this.title = title;
+        this.price = price;
+        this.author = author;
     }
 
     private static Set<Book> books;
@@ -34,27 +34,27 @@ public class Book {
         return books;
     }
 
-    public static Book findById(Integer idin)
+    public static Book findById(Integer id)
     {
         //Book tempbook;
-        for (Book tempbook: books)
+        for (Book book: books)
         {
-            if(idin.equals(tempbook.id))
+            if(id.equals(book.id))
             {
-                return tempbook;
+                return book;
             }
         }
         return null;
     }
 
-    public static void add (Book bookin)
+    public static void add (Book book)
     {
-        books.add(bookin);
+        books.add(book);
     }
 
-    public static void remove(Book bookin)
+    public static void remove(Book book)
     {
-        books.remove(bookin);
+        books.remove(book);
     }
 
 }

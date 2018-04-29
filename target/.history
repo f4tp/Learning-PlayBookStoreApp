@@ -62,3 +62,26 @@ run -jvm-debug
 run
 compile
 run
+compile
+run
+compile
+run
+compile
+run
+run -jvm-debug 9999
+-jvm-debug 9999
+run -jvm-debug 9999
+sbt -run -jvm-debug 9999
+-run -jvm-debug 9999
+-run -jvm -debug 9999
+debug
+play debug
+debug
+run -debug
+compile
+play debug
+debug
+run debug
+debug run
+debug jvm-debug 9999
+sbt -run -jvm-debug 9999

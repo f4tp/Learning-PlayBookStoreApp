@@ -11,7 +11,7 @@ import play.data.*;
 public class BooksController extends Controller {
 
     @Inject
-    FormFactory myFormFactory;
+    play.data.FormFactory formFactory;
 
     public Result index()
     {
@@ -22,16 +22,28 @@ public class BooksController extends Controller {
     //to create book
     public Result create()
     {
-        //formfactory creates us a form for injected into the web page
-        Form<Book> bookForm = myFormFactory.form(Book.class);
+        //formfactory creates us a form injected into the web page
+        play.data.Form<Book> bookForm = formFactory.form(Book.class);
         return ok(create.render(bookForm));
         //return TODO;
 
     }
 
+    //POST HTTP request so going to handle data coming in
+    //from create.scala.html page
     public Result save()
     {
-        return TODO;
+        //get form that was generated in create method
+        Form<Book> bookForm = formFactory.form(Book.class).bindFromRequest();
+
+
+        //get book data out of form and compose book object
+        Book book = bookForm.get();
+         //add the book to the list calling static method in Book model
+        Book.add(book);
+
+        //redirect them to the result / where they need to be next
+        return redirect(routes.BooksController.index());
     }
 
     public Result edit(Integer idOfBook)
